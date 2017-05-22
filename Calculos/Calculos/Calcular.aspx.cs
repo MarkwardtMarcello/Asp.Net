@@ -10,10 +10,6 @@ namespace Calculos
     public partial class Calcular : System.Web.UI.Page
     {
         public int Soma { get; set; }
-        public int Subtracao { get; set; }
-        public int Multiplicacao { get; set; }
-        public int Divisao { get; set; }
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,35 +25,20 @@ namespace Calculos
             resul = a + b;
             txtResultadoMais.Text = resul.ToString();
         }
-
-        protected void btnMenos_Click(object sender, EventArgs e)
+        
+        protected void btnIgual_Click(object sender, EventArgs e)
         {
-            int a, b, resul;
+            
 
-            a = Convert.ToInt32(txtNumMenos.Text);
-            b = Convert.ToInt32(txtNumMenos2.Text);
-            resul = a - b;
-            txtResultMenos.Text = resul.ToString();
-        }
+            Session["valor1"] = txtNum1.Text;
+            Session["valor2"] = txtNum2.Text;
+            
 
-        protected void btnVezes_Click(object sender, EventArgs e)
-        {
-            int a, b, resul;
+            // Redirecionando o usuario
+            Response.Redirect("~/Resultado.aspx");
 
-            a = Convert.ToInt32(txtNumVezes.Text);
-            b = Convert.ToInt32(txtNumVezes2.Text);
-            resul = a * b;
-            txtResulVezes.Text = resul.ToString();
-        }
+           
 
-        protected void btnDiv_Click(object sender, EventArgs e)
-        {
-            int a, b, resul;
-
-            a = Convert.ToInt32(txtNumDiv.Text);
-            b = Convert.ToInt32(txtNumDiv2.Text);
-            resul = a / b;
-            txtResulDiv.Text = resul.ToString();
         }
     }
 }
