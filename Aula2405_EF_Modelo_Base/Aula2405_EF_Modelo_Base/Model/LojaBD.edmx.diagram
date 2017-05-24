@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d61893204a5f4d86a57b3ef51e9a3071" Name="Diagram1" >
+        <EntityTypeShape EntityType="LojaBD.Produto" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="LojaBD.Categoria" Width="1.5" PointX="6.125" PointY="1.5" />
+        <AssociationConnector Association="LojaBD.CategoriaProduto" />
+        <EntityTypeShape EntityType="LojaBD.Categorias" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="LojaBD.Categorias1" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="LojaBD.Categorias11" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="LojaBD.Produtos" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="LojaBD.Produtos1" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="LojaBD.Produtos11" Width="1.5" PointX="7.75" PointY="4.75" />
+        <AssociationConnector Association="LojaBD.FK_CategoriaProduto" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
