@@ -145,7 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="VIEWS\Produtos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -225,7 +224,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="VIEWS\Categorias\Criar.aspx" />
     <Content Include="VIEWS\Categorias\Lista.aspx" />
+    <Content Include="VIEWS\Produtos\ListaProdutos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -322,6 +323,13 @@
     <Compile Include="VIEWS\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="VIEWS\Categorias\Criar.aspx.cs">
+      <DependentUpon>Criar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VIEWS\Categorias\Criar.aspx.designer.cs">
+      <DependentUpon>Criar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VIEWS\Categorias\Lista.aspx.cs">
       <DependentUpon>Lista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,6 +337,14 @@
     <Compile Include="VIEWS\Categorias\Lista.aspx.designer.cs">
       <DependentUpon>Lista.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VIEWS\Produtos\ListaProdutos.aspx.cs">
+      <DependentUpon>ListaProdutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VIEWS\Produtos\ListaProdutos.aspx.designer.cs">
+      <DependentUpon>ListaProdutos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VIEWS\Produtos\ListaProdutos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
