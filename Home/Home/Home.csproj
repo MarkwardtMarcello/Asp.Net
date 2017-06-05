@@ -228,7 +228,11 @@
     <Content Include="View\Ferramenta\Editar.aspx" />
     <Content Include="View\Ferramenta\Excluir.aspx" />
     <Content Include="View\Ferramenta\ListarFerramentas.aspx" />
+    <Content Include="View\Maquina\BuscaMaq.aspx" />
     <Content Include="View\Maquina\CadastroMaq.aspx" />
+    <Content Include="View\Maquina\EditarMaq.aspx" />
+    <Content Include="View\Maquina\ExcluirMaq.aspx" />
+    <Content Include="View\Maquina\ListarMaq.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -353,12 +357,40 @@
     <Compile Include="View\Ferramenta\ListarFerramentas.aspx.designer.cs">
       <DependentUpon>ListarFerramentas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Maquina\BuscaMaq.aspx.cs">
+      <DependentUpon>BuscaMaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maquina\BuscaMaq.aspx.designer.cs">
+      <DependentUpon>BuscaMaq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Maquina\CadastroMaq.aspx.cs">
       <DependentUpon>CadastroMaq.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Maquina\CadastroMaq.aspx.designer.cs">
       <DependentUpon>CadastroMaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maquina\EditarMaq.aspx.cs">
+      <DependentUpon>EditarMaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maquina\EditarMaq.aspx.designer.cs">
+      <DependentUpon>EditarMaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maquina\ExcluirMaq.aspx.cs">
+      <DependentUpon>ExcluirMaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maquina\ExcluirMaq.aspx.designer.cs">
+      <DependentUpon>ExcluirMaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Maquina\ListarMaq.aspx.cs">
+      <DependentUpon>ListarMaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Maquina\ListarMaq.aspx.designer.cs">
+      <DependentUpon>ListarMaq.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

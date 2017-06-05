@@ -24,9 +24,9 @@ namespace Home.Controller
             return contexto.Ferramentas.ToList();
         }//fimlista
 
-        public Ferramenta BuscarFerramentaNome(string nome)
+        public Ferramenta BuscarFerramentaNome(Ferramenta ferra)
         {
-            return contexto.Ferramentas.Find(nome);
+            return contexto.Ferramentas.Find(ferra);
         }
 
         public void Excluir(Ferramenta ferra)
@@ -34,6 +34,13 @@ namespace Home.Controller
             contexto.Entry(ferra).State = System.Data.Entity.EntityState.Deleted;
             contexto.SaveChanges();
 
+        }
+        public void Editar(Ferramenta ferra)
+        {
+            contexto.Entry(ferra).State =
+                System.Data.Entity.EntityState.Modified;
+
+            contexto.SaveChanges();
         }
 
     }

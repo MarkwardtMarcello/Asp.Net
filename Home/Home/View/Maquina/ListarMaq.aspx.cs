@@ -7,15 +7,16 @@ using System.Web.UI.WebControls;
 using Home.Controller;
 using Home.Model;
 
-namespace Home.View
+namespace Home.View.Maquina
 {
-    public partial class ListarFerramentas : System.Web.UI.Page
+    public partial class ListarMaq : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            FerramentaController ctrl = new FerramentaController();
-           // List<Ferramenta> lista = ctrl.Listar();
-           // gvListaFerramenta.DataSource = lista.OrderBy(c => c.Nome);
+            MaquinaController ctrl = new MaquinaController();
+             List<Maquina> lista = ctrl.Listar();
+             gvLista.DataSource = lista.OrderBy(c => c.Nome);
+
         }
     }
 }

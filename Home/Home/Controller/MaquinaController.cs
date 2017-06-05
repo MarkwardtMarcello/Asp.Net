@@ -35,6 +35,13 @@ namespace Home.Controller
             contexto.SaveChanges();
 
         }
+        public void Editar(Maquina m)
+        {
+            contexto.Entry(m).State =
+                System.Data.Entity.EntityState.Modified;
+
+            contexto.SaveChanges();
+        }
 
     }
 }

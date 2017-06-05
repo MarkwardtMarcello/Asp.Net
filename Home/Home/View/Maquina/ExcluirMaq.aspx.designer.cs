@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Home.View {
+namespace Home.View.Maquina {
     
     
-    public partial class Excluir {
+    public partial class ExcluirMaq {
         
         /// <summary>
         /// gvExcluir control.
@@ -22,22 +22,22 @@ namespace Home.View {
         protected global::System.Web.UI.WebControls.GridView gvExcluir;
         
         /// <summary>
-        /// lblNome control.
+        /// lblNomeM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
+        protected global::System.Web.UI.WebControls.Label lblNomeM;
         
         /// <summary>
-        /// txtNomeFer control.
+        /// txtNomeM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeFer;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeM;
         
         /// <summary>
         /// btnExcluir control.

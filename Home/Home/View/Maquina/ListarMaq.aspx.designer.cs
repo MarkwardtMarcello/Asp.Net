@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Home.View {
+namespace Home.View.Maquina {
     
     
-    public partial class ListarFerramentas {
+    public partial class ListarMaq {
         
         /// <summary>
-        /// gvListaFerramenta control.
+        /// gvLista control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvListaFerramenta;
+        protected global::System.Web.UI.WebControls.GridView gvLista;
     }
 }

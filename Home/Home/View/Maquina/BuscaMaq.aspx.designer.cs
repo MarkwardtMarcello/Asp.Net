@@ -7,45 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Home.View {
+namespace Home.View.Maquina {
     
     
-    public partial class Excluir {
+    public partial class BuscaMaq {
         
         /// <summary>
-        /// gvExcluir control.
+        /// lblNomeM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvExcluir;
+        protected global::System.Web.UI.WebControls.Label lblNomeM;
         
         /// <summary>
-        /// lblNome control.
+        /// txtNomeM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeM;
         
         /// <summary>
-        /// txtNomeFer control.
+        /// lblProdM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeFer;
+        protected global::System.Web.UI.WebControls.Label lblProdM;
         
         /// <summary>
-        /// btnExcluir control.
+        /// txtProdM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExcluir;
+        protected global::System.Web.UI.WebControls.TextBox txtProdM;
+        
+        /// <summary>
+        /// btnBuscarM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscarM;
     }
 }
