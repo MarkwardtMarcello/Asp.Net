@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Home.Model; 
 
-namespace Home.Controller
+namespace CadastroFerramenta.Controller
 {
     public class FerramentaController
     {
         protected BancoFerramentasContainer contexto = new BancoFerramentasContainer();
-        
-        public void Adicionar (Ferramenta ferra)
+
+        public void Adicionar(Ferramenta ferra)
         {
             if (ferra != null)
             {
@@ -42,6 +41,5 @@ namespace Home.Controller
 
             contexto.SaveChanges();
         }
-
     }
 }

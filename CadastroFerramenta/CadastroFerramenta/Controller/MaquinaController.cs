@@ -1,10 +1,9 @@
-﻿using Home.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Home.Controller
+namespace CadastroFerramenta.Controller
 {
     public class MaquinaController
     {
@@ -42,6 +41,5 @@ namespace Home.Controller
 
             contexto.SaveChanges();
         }
-
     }
 }

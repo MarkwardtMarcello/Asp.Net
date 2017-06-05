@@ -13,9 +13,9 @@ namespace Home.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            FerramentaController ctrl = new FerramentaController();
-           // List<Ferramenta> lista = ctrl.Listar();
-           // gvListaFerramenta.DataSource = lista.OrderBy(c => c.Nome);
+           FerramentaController ctrl = new FerramentaController();
+           List<Ferramenta> lista = ctrl.Listar();
+           gvListaFerramenta.DataSource = lista.OrderBy(c => c.Nome);
         }
     }
 }
