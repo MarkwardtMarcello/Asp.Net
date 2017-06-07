@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Sobre";
+}
+<h2>@ViewBag.Title.</h2>
+
+<h1>@ViewBag.Message</h1>
+
+@Html.TextBox("Nome")
+@Html.TextBox("SobreNome", "Jr")
+@Html.TextBox("CPF", null, new { @class = "form-control"})
+@Html.TextBox("CPF2", null, new { @class = "form-control", placeholder="000.000.000-00" })
+@Html.CheckBox("Ativo", true)Ativo
