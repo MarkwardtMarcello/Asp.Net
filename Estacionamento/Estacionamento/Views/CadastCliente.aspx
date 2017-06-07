@@ -9,7 +9,9 @@
     <asp:Label ID="lblNomeC" runat="server" Text="Nome: "></asp:Label>
     
     <asp:TextBox ID="txtNomeC" runat="server"></asp:TextBox>
+    
     <br />
+
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   />
     
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />

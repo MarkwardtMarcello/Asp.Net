@@ -13,14 +13,21 @@ namespace Estacionamento.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                VeiculoController ctrl = new VeiculoController();
+                dropdwClietV.DataSource = ctrl.Listar();
+                dropdwClietV.DataBind();
+            }
+            
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            VeiculoController ctrl = new VeiculoController();
             Veiculo v = new Veiculo();
             v.Modelo = txtNomeV.Text;
-            VeiculoController ctrl = new VeiculoController();
+            v.ClienteId = int.Parse(dropdwClietV.SelectedValue);
             ctrl.Adicionar(v);
 
         }

@@ -5,13 +5,16 @@
 
     <h1>Cadastrar Veiculo/Buscar Veiculo</h1>
 
-    <asp:Label ID="lblNomeV" runat="server" Text="Nome: "></asp:Label>
+    
     
     <asp:TextBox ID="txtNomeV" runat="server"></asp:TextBox>
     <br />
             <asp:Label ID="lblVcor" runat="server" Text="Cor: "></asp:Label>
     
     <asp:TextBox ID="txtVCor" runat="server"></asp:TextBox>
+            <br/>
+    <asp:Label ID="lblNomeCliente" runat="server" Text="Cliente: "></asp:Label>
+    <asp:DropDownList ID="dropdwClietV" runat="server" DataTextField="Nome" DataValueField="Id"></asp:DropDownList>
     <br />
 
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   />

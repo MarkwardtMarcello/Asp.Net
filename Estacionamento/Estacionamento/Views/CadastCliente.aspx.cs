@@ -13,16 +13,18 @@ namespace Estacionamento.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
 
         }
        
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            ClienteController ctrl = new ClienteController();
             Cliente c = new Cliente();
             c.Nome = txtNomeC.Text;
-            ClienteController ctrl = new ClienteController();
+            
+                    
             ctrl.Adicionar(c);
             txtNomeC.Text = "";
             
