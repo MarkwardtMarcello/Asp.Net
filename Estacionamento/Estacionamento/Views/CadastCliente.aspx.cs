@@ -38,7 +38,7 @@ namespace Estacionamento.Views
 
             ClienteController ctrl = new ClienteController();
             Cliente c = new Cliente();
-            c.Nome = txtEdtCliente.Text;
+            c.Nome = txtNomeC.Text;
             c = ctrl.BuscarCliente(c.Nome);
 
             if(c != null)

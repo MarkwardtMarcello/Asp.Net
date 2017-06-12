@@ -6,7 +6,7 @@
     <h1>Cadastrar Veiculo/Buscar Veiculo</h1>
 
     
-    
+    <asp:Label ID="lblNomeV" runat="server" Text="Nome: "></asp:Label>
     <asp:TextBox ID="txtNomeV" runat="server"></asp:TextBox>
     <br />
             <asp:Label ID="lblVcor" runat="server" Text="Cor: "></asp:Label>
