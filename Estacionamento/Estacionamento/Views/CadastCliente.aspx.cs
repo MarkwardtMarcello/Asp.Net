@@ -43,7 +43,7 @@ namespace Estacionamento.Views
 
             if(c != null)
             {
-                txtEdtCliente.Text = c.Nome;
+                c.Nome = txtEdtCliente.Text;
                 ctrl.Editar(c);
             }
             
@@ -76,7 +76,7 @@ namespace Estacionamento.Views
             
             if(c != null)
             {
-                txtNomeC.Text = c.Nome;
+                txtBNome.Text = c.Nome;
                 c = ctrl.BuscarCliente(c.Nome);
 
 

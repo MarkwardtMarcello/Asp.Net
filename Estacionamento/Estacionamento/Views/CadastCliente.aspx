@@ -15,6 +15,12 @@
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   />
     
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+    
+            <h1>Cliente Encontrado</h1>
+            <asp:Label ID="lblBNome" runat="server" Text="Nome: "></asp:Label>
+    
+    <asp:TextBox ID="txtBNome" runat="server"></asp:TextBox>
+
 
     <h1>Editar Cliente</h1>
 

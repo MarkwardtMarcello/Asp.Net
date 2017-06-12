@@ -14,7 +14,8 @@
     <asp:TextBox ID="txtVCor" runat="server"></asp:TextBox>
             <br/>
     <asp:Label ID="lblNomeCliente" runat="server" Text="Cliente: "></asp:Label>
-    <asp:DropDownList ID="dropdwClietV" runat="server" DataTextField="Nome" DataValueField="Id"></asp:DropDownList>
+    <asp:DropDownList ID="dropdwClietV" runat="server" DataTextField="Nome" DataValueField="Id" DataSourceID="SqlDataSource1" Height="16px" Width="129px"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BancoStarConnectionString %>" SelectCommand="SELECT [Id], [Nome] FROM [Clientes]"></asp:SqlDataSource>
     <br />
 
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   />
@@ -28,11 +29,6 @@
     <asp:Label ID="lblBVC" runat="server" Text="Cor: "></asp:Label>
     <asp:TextBox ID="txtBVC" runat="server"></asp:TextBox>
     <br />
-
-
-
-    
-    
 
     <h1>Editar Veiculo</h1>
 
