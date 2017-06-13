@@ -35,59 +35,6 @@ namespace Estacionamento.Views
 
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-           
-            VeiculoController ctrl = new VeiculoController();
-            Veiculo v = new Veiculo();
-            v.Modelo = txtNomeV.Text;
-            v.Cor = txtVCor.Text;
-            //v = ctrl.BuscarVeiculo(v.Modelo);
-
-            if (v != null)
-            {
-                txtBV.Text = v.Modelo;
-                txtBVC.Text = v.Cor;
-                ctrl.BuscarVeiculo(v.Modelo);
-                
-            }
-
-        }
-
-        protected void btnEditarV_Click(object sender, EventArgs e)
-        {
-
-            VeiculoController ctrl = new VeiculoController();
-            Veiculo v = new Veiculo();
-            v.Modelo = txtNomeV.Text;
-            v.Cor = txtVCor.Text;
-            if(v != null)
-            {
-                txtEdtV.Text = v.Modelo;
-                txtEditVCor.Text = v.Cor;
-                ctrl.Editar(v);
-                
-            }
-            
-
-
-        }
-
-        protected void btnExcluir_Click(object sender, EventArgs e)
-        {
-            Veiculo v = new Veiculo();
-            VeiculoController ctrl = new VeiculoController();
-            v.Modelo = txtExcv.Text;
-            v.Cor = txtExVcor.Text;
-            
-            v = ctrl.BuscarVeiculo(v.Modelo);
-
-            if(v != null)
-            {
-                txtExcv.Text = v.Modelo;
-                txtExVcor.Text = v.Cor;
-                ctrl.Excluir(v);
-            }
-        }
+       
     }
 }

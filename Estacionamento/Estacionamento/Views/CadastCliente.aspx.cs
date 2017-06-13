@@ -32,55 +32,6 @@ namespace Estacionamento.Views
         }
 
         
-
-        protected void btnEditarC_Click(object sender, EventArgs e)
-        {
-
-            ClienteController ctrl = new ClienteController();
-            Cliente c = new Cliente();
-            c.Nome = txtNomeC.Text;
-            c = ctrl.BuscarCliente(c.Nome);
-
-            if(c != null)
-            {
-                c.Nome = txtEdtCliente.Text;
-                ctrl.Editar(c);
-            }
-            
-        }
-
-        protected void btnExcluir_Click(object sender, EventArgs e)
-        {
-            
-            Cliente c = new Cliente();
-            ClienteController ct = new ClienteController();
-            c.Nome = txtExcCliente.Text;
-            c = ct.BuscarCliente(c.Nome);
-            
-
-            if(c != null)
-            {
-                txtExcCliente.Text = c.Nome;
-                ct.Excluir(c);
-
-            }
-            
-        }
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-            ClienteController ctrl = new ClienteController();
-            Cliente c = new Cliente();
-            c.Nome = txtNomeC.Text;
-            
-            if(c != null)
-            {
-                txtBNome.Text = c.Nome;
-                c = ctrl.BuscarCliente(c.Nome);
-
-
-            }
-        }
+        
     }
 }

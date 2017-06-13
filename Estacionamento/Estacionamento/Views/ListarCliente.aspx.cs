@@ -24,5 +24,52 @@ namespace Estacionamento.Views
         {
             Response.Redirect("CadastCliente.aspx");
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ClienteController ctrl = new ClienteController();
+            Cliente c = new Cliente();
+            c.Nome = txtBNome.Text;
+
+            if (c != null)
+            {
+                txtEdtCliente.Text = c.Nome;
+                txtExcCliente.Text = c.Nome;
+                c = ctrl.BuscarCliente(c.Nome);
+
+
+            }
+        }
+
+        protected void btnEditarC_Click(object sender, EventArgs e)
+        {
+            ClienteController ctrl = new ClienteController();
+            Cliente c = new Cliente();
+            txtEdtCliente.Text = c.Nome;
+            c = ctrl.BuscarCliente(c.Nome);
+
+            if (c != null)
+            {
+                c.Nome = txtEdtCliente.Text;
+                ctrl.Editar(c);
+            }
+        }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+            ClienteController ct = new ClienteController();
+            txtExcCliente.Text = c.Nome;
+            c = ct.BuscarCliente(c.Nome);
+
+
+            if (c != null)
+            {
+                txtExcCliente.Text = c.Nome;
+                ct.Excluir(c);
+
+            }
+
+        }
     }
 }
