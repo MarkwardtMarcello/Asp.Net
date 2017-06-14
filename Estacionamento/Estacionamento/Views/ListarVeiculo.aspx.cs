@@ -42,10 +42,13 @@ namespace Estacionamento.Views
             {
                 txtBV.Text = v.Modelo;
                 txtBVC.Text = v.Cor;
-                txtEditVCor.Text = v.Modelo;
-                txtEdtV.Text = v.Cor;
-                txtExcv.Text = v.Modelo;
+
+                txtEditVCor.Text = v.Cor;
+                txtEdtV.Text = v.Modelo;
+
                 txtExVcor.Text = v.Cor;
+                txtExcv.Text = v.Modelo;
+                
                 ctrl.BuscarVeiculo(v.Modelo);
 
             }
@@ -54,13 +57,15 @@ namespace Estacionamento.Views
         protected void btnEditarV_Click(object sender, EventArgs e)
         {
             VeiculoController ctrl = new VeiculoController();
-            Veiculo v = new Veiculo();
+            Veiculo v = ctrl.BuscarVeiculo(txtBV.Text);
             v.Modelo = txtEdtV.Text;
             v.Cor = txtEditVCor.Text;
+            
             if (v != null)
             {
                 txtEdtV.Text = v.Modelo;
                 txtEditVCor.Text = v.Cor;
+                
                 ctrl.Editar(v);
 
             }
@@ -68,12 +73,9 @@ namespace Estacionamento.Views
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            Veiculo v = new Veiculo();
             VeiculoController ctrl = new VeiculoController();
-            v.Modelo = txtExcv.Text;
-            v.Cor = txtExVcor.Text;
-
-            v = ctrl.BuscarVeiculo(v.Modelo);
+            Veiculo v = ctrl.BuscarVeiculo(txtBV.Text);
+            
 
             if (v != null)
             {

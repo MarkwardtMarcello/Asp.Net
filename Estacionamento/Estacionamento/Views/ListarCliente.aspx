@@ -19,8 +19,7 @@
     
     <asp:TextBox ID="txtEdtCliente" runat="server"></asp:TextBox>
     <br />
-    <asp:TextBox ID="txtEdiClienteN" runat="server"></asp:TextBox>
-    <br />
+    
     <asp:Button ID="btnEditarC" runat="server" Text="Editar" OnClick="btnEditarC_Click" />
 
 

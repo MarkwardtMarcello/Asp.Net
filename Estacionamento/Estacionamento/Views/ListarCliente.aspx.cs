@@ -34,7 +34,6 @@ namespace Estacionamento.Views
             if (c != null)
             {
                 txtEdtCliente.Text = c.Nome;
-                txtExcCliente.Text = c.Nome;
                 c = ctrl.BuscarCliente(c.Nome);
 
 
@@ -44,31 +43,27 @@ namespace Estacionamento.Views
         protected void btnEditarC_Click(object sender, EventArgs e)
         {
             ClienteController ctrl = new ClienteController();
-            Cliente c = new Cliente();
-            txtEdtCliente.Text = c.Nome;
-            c = ctrl.BuscarCliente(c.Nome);
+            Cliente c = ctrl.BuscarCliente(txtBNome.Text);
+            c.Nome = txtEdtCliente.Text;
+
 
             if (c != null)
             {
                 c.Nome = txtEdtCliente.Text;
-                c.Nome = txtEdiClienteN.Text;
-
                 ctrl.Editar(c);
             }
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            ClienteController ct = new ClienteController();
-            txtExcCliente.Text = c.Nome;
-            c = ct.BuscarCliente(c.Nome);
-
+            ClienteController ctrl = new ClienteController();
+            Cliente c = ctrl.BuscarCliente(txtBNome.Text);
+            c.Nome = txtExcCliente.Text;
 
             if (c != null)
             {
-                txtExcCliente.Text = c.Nome;
-                ct.Excluir(c);
+                c.Nome = txtExcCliente.Text;
+                ctrl.Excluir(c);
 
             }
 
