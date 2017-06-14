@@ -51,6 +51,8 @@ namespace Estacionamento.Views
             if (c != null)
             {
                 c.Nome = txtEdtCliente.Text;
+                c.Nome = txtEdiClienteN.Text;
+
                 ctrl.Editar(c);
             }
         }

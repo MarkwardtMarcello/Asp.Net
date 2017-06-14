@@ -76,6 +76,15 @@ namespace Estacionamento.Views {
         protected global::System.Web.UI.WebControls.TextBox txtEdtCliente;
         
         /// <summary>
+        /// txtEdiClienteN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEdiClienteN;
+        
+        /// <summary>
         /// btnEditarC control.
         /// </summary>
         /// <remarks>

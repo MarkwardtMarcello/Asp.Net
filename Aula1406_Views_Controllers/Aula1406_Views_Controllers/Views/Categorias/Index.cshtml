@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Aula1406_Views_Controllers.Models.Categoria>
+
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach(var item in Model)
+{
+    @Html.LabelFor(m=> item.Nome)
+    @Html.DisplayFor(m=> item.Nome)
+
+
+    
+}
+
