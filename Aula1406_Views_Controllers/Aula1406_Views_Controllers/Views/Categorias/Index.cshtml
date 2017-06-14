@@ -6,6 +6,12 @@
 
 <h2>@ViewBag.Title</h2>
 
+
+@if (TempData["Mensagem"] != null)
+{
+    <p class="alert-info">@ViewBag.Mensagem</p>
+}
+
 @foreach(var item in Model)
 {
     @Html.LabelFor(m=> item.Nome)
