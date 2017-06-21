@@ -66,8 +66,14 @@
                     </li>
                 </ul>
             </div>
+
         </div>
-        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Criar Conta", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    </div>
     
     <div class="container body-content">
         @RenderBody()

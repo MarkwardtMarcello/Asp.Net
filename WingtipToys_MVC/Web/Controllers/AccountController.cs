@@ -12,7 +12,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
-    [Authorize]
+    [Authorize] //  tem q estar logado no site para acessar
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -54,7 +54,8 @@ namespace Web.Controllers
 
         //
         // GET: /Account/Login
-        [AllowAnonymous]
+        [AllowAnonymous] // permite anonimos
+
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -63,9 +64,12 @@ namespace Web.Controllers
 
         //
         // POST: /Account/Login
+        // "async" pq pode demorar para responder, depender de outro sistema
+        //(mostrando uma mensagem ou algo para dizer q tem q esperar)
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+       
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
@@ -81,12 +85,12 @@ namespace Web.Controllers
                 case SignInStatus.Success:
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    return View("Bloqueado");
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Login inválido.");
                     return View(model);
             }
         }
@@ -126,7 +130,7 @@ namespace Web.Controllers
                 case SignInStatus.Success:
                     return RedirectToLocal(model.ReturnUrl);
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    return View("Bloqueado");
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid code.");
