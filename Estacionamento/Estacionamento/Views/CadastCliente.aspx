@@ -4,7 +4,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
-    <h1>Cadastrar Cliente/Buscar Cliente</h1>
+    <h1>Cadastrar Cliente</h1>
 
     <asp:Label ID="lblNomeC" runat="server" Text="Nome: "></asp:Label>
     

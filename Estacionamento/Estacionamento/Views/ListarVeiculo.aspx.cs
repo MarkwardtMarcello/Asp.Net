@@ -43,12 +43,11 @@ namespace Estacionamento.Views
                 txtBV.Text = v.Modelo;
                 txtBVC.Text = v.Cor;
 
-                txtEditVCor.Text = v.Cor;
                 txtEdtV.Text = v.Modelo;
+                txtEditVCor.Text = v.Cor;
 
-                txtExVcor.Text = v.Cor;
                 txtExcv.Text = v.Modelo;
-                
+                txtExVcor.Text = v.Cor;
                 ctrl.BuscarVeiculo(v.Modelo);
 
             }
@@ -65,7 +64,6 @@ namespace Estacionamento.Views
             {
                 txtEdtV.Text = v.Modelo;
                 txtEditVCor.Text = v.Cor;
-                
                 ctrl.Editar(v);
 
             }
