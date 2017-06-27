@@ -30,8 +30,8 @@ namespace Ferramentas.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<BaseModels.Manutencao> Manutencaos { get; set; }
+        public System.Data.Entity.DbSet<BaseModels.Manutencao> Manutencoes { get; set; }
 
-        public System.Data.Entity.DbSet<BaseModels.Produto> Produtoes { get; set; }
+        public System.Data.Entity.DbSet<BaseModels.Produto> Produtos { get; set; }
     }
 }

@@ -7,15 +7,15 @@ using BaseModels;
 
 namespace Ferramentas
 {
-    public class ManutencaosController : Controller
+    public class ManutencoesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Manutencaos
         public ActionResult Index()
         {
-            var manutencaos = db.Manutencaos.Include(m => m.produto);
-            return View(manutencaos.ToList());
+            var manutencoes = db.Manutencoes.Include(m => m.produto);
+            return View(manutencoes.ToList());
         }
 
         // GET: Manutencaos/Details/5
@@ -25,7 +25,7 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Manutencao manutencao = db.Manutencaos.Find(id);
+            Manutencao manutencao = db.Manutencoes.Find(id);
             if (manutencao == null)
             {
                 return HttpNotFound();
@@ -36,7 +36,7 @@ namespace Ferramentas
         // GET: Manutencaos/Create
         public ActionResult Create()
         {
-            ViewBag.ProdutoID = new SelectList(db.Produtoes, "ProdutoID", "ProdutoID");
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "ProdutoID");
             return View();
         }
 
@@ -49,12 +49,12 @@ namespace Ferramentas
         {
             if (ModelState.IsValid)
             {
-                db.Manutencaos.Add(manutencao);
+                db.Manutencoes.Add(manutencao);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProdutoID = new SelectList(db.Produtoes, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
             return View(manutencao);
         }
 
@@ -65,12 +65,12 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Manutencao manutencao = db.Manutencaos.Find(id);
+            Manutencao manutencao = db.Manutencoes.Find(id);
             if (manutencao == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ProdutoID = new SelectList(db.Produtoes, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
             return View(manutencao);
         }
 
@@ -87,7 +87,7 @@ namespace Ferramentas
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ProdutoID = new SelectList(db.Produtoes, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
             return View(manutencao);
         }
 
@@ -98,7 +98,7 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Manutencao manutencao = db.Manutencaos.Find(id);
+            Manutencao manutencao = db.Manutencoes.Find(id);
             if (manutencao == null)
             {
                 return HttpNotFound();
@@ -111,8 +111,8 @@ namespace Ferramentas
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Manutencao manutencao = db.Manutencaos.Find(id);
-            db.Manutencaos.Remove(manutencao);
+            Manutencao manutencao = db.Manutencoes.Find(id);
+            db.Manutencoes.Remove(manutencao);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

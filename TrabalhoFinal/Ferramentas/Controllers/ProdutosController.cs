@@ -8,14 +8,14 @@ using BaseModels;
 
 namespace Ferramentas
 {
-    public class ProdutoesController : Controller
+    public class ProdutosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         
         public ActionResult Index()
         {
-            return View(db.Produtoes.ToList());
+            return View(db.Produtos.ToList());
         }
 
         
@@ -25,7 +25,7 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
+            Produto produto = db.Produtos.Find(id);
             if (produto == null)
             {
                 return HttpNotFound();
@@ -45,7 +45,7 @@ namespace Ferramentas
         {
             if (ModelState.IsValid)
             {
-                db.Produtoes.Add(produto);
+                db.Produtos.Add(produto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -60,7 +60,7 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
+            Produto produto = db.Produtos.Find(id);
             if (produto == null)
             {
                 return HttpNotFound();
@@ -89,7 +89,7 @@ namespace Ferramentas
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
+            Produto produto = db.Produtos.Find(id);
             if (produto == null)
             {
                 return HttpNotFound();
@@ -102,8 +102,8 @@ namespace Ferramentas
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Produto produto = db.Produtoes.Find(id);
-            db.Produtoes.Remove(produto);
+            Produto produto = db.Produtos.Find(id);
+            db.Produtos.Remove(produto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
