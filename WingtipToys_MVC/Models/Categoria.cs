@@ -23,5 +23,6 @@ namespace BaseModels
 
         [Required]
         public bool Ativo { get; set; }
+
     }
 }

@@ -1,0 +1,42 @@
+﻿@model BaseModels.Produto
+
+@{
+    ViewBag.Title = "Detalhes dos Produtos";
+}
+
+<h2>Detalhes dos Produtos</h2>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diametro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diametro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ProdutoID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

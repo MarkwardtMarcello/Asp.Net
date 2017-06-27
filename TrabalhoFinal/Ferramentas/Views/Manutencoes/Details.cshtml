@@ -1,0 +1,66 @@
+﻿@model BaseModels.Manutencao
+
+@{
+    ViewBag.Title = "Lista das Peças";
+}
+
+<h2>Lista das Peças</h2>
+
+<div>
+    <h4>Manutencao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.produto.ProdutoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.produto.ProdutoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFuncionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeFuncionario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nova)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nova)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Polimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Polimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Retifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Retifica)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ManutencaoID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

@@ -1,0 +1,48 @@
+﻿@model BaseModels.Produto
+
+@{
+    ViewBag.Title = "Apagar Produto";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseja apagar o produto?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diametro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diametro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

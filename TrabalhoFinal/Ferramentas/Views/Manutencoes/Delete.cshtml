@@ -1,0 +1,72 @@
+﻿@model BaseModels.Manutencao
+
+@{
+    ViewBag.Title = "Deletar Peças";
+}
+
+<h2>Deletar Peças</h2>
+
+<h3>Deseja deletar essa peça?</h3>
+<div>
+    <h4>Manutencao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.produto.ProdutoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.produto.ProdutoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFuncionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeFuncionario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nova)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nova)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Polimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Polimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Retifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Retifica)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
