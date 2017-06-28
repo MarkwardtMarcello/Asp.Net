@@ -54,6 +54,8 @@ namespace Ferramentas
                 return RedirectToAction("Index");
             }
 
+
+            // mudei produtoID para matricula.
             ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "ProdutoID", manutencao.ProdutoID);
             return View(manutencao);
         }

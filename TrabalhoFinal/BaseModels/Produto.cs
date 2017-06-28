@@ -19,12 +19,13 @@ namespace BaseModels
         public int Matricula { get; set; }
 
        
-        [Required(ErrorMessage = "Inserir Diametro")]
+        [Required(ErrorMessage = "Inserir Diametro!")]
         [Display(Name ="Diâmetro: ")]
-        public bool Diametro { get; set; }
+        
+        public decimal Diametro { get; set; }
 
-        [Required(ErrorMessage ="Informar Produção Total da ferramenta")]
-        [Display(Name ="Total de produção por ferramenta")]
+        [Required(ErrorMessage ="Informar Produção Total da ferramenta!")]
+        [Display(Name ="Total de produção por Tonelada: ")]
         public int Producao { get; set; }
 
         

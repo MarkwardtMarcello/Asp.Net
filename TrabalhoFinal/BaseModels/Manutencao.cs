@@ -12,11 +12,12 @@ namespace BaseModels
         [Key]
         public int ManutencaoID { get; set; }
         [Required(ErrorMessage = "Inserir Nome do responsavel!!")]
-        [Display(Name = "Nome: ")]
+        [Display(Name = "Nome do funcionario: ")]
         public string NomeFuncionario { get; set; }
 
         [Required(ErrorMessage = "Adicionar custo da Ferramenta")]
-        [Display(Name = "Custo")]
+        [Display(Name = "Valor/Custo")]
+        [DataType(DataType.Currency)]
         public decimal Custo { get; set; }
 
         public bool Nova { get; set; }

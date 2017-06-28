@@ -1,6 +1,6 @@
 ﻿@model Ferramentas.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Mensagem";
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -15,11 +15,11 @@
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Trocar senha", "ChangePassword")
             }
             else
             {
-                @Html.ActionLink("Create", "SetPassword")
+                @Html.ActionLink("Criar senha", "SetPassword")
             }
             ]
         </dd>
