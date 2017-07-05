@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/07/2017 08:37:52
+-- Date Created: 07/05/2017 11:36:45
 -- Generated from EDMX file: C:\Markwardt\ProjetosMarceloMarkwardt\Estacionamento\Estacionamento\Model\BancoEstar.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [BancoStar];
+USE [BancoEstacionamento];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO

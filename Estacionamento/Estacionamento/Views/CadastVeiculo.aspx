@@ -15,7 +15,7 @@
     
     <asp:Label ID="lblNomeCliente" runat="server" Text="Cliente: "></asp:Label>
     <asp:DropDownList ID="dropdwClietV" runat="server" DataTextField="Nome" DataValueField="Id" DataSourceID="SqlDataSource1" Height="16px" Width="129px"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BancoStarConnectionString %>" SelectCommand="SELECT [Id], [Nome] FROM [Clientes]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BancoEstarContainer %>" SelectCommand="SELECT [Id], [Nome] FROM [Clientes]"></asp:SqlDataSource>
     <br />
 
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   />

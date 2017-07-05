@@ -82,7 +82,7 @@ namespace Ferramentas
             return View(produto);
         }
 
-        // GET: Produtoes/Delete/5
+        
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -97,7 +97,7 @@ namespace Ferramentas
             return View(produto);
         }
 
-        // POST: Produtoes/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
